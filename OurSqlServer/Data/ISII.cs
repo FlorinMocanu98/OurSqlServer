@@ -10,19 +10,22 @@ namespace OurSqlServer.Data
     {
         //private List<List<Persona>> Listaaa = new List<List<!>>();
 
-        private List<Studenti> Alunni = new List<Studenti>();
-        private List<Insegnanti> Docenti = new List<Insegnanti>();
+        public List<Studenti> Studenti { get; set; }
+        public List<Insegnanti> Insegnanti { get; set; }
 
 
         public ISII()
         {
-            
+            this.Studenti = new List<Studenti>();
+            this.Insegnanti = new List<Insegnanti>();
         }
 
-        public Alunno (Studenti A)
+        public ISII(List<Studenti> stud, List<Insegnanti> ins)
         {
-
+            Studenti = stud;
+            Insegnanti = ins;
         }
+
     }
 
 }

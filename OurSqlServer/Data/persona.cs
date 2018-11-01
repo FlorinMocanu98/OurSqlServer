@@ -8,9 +8,10 @@ namespace OurSqlServer.Data
 {
     abstract class Persona
     {
-        private string Nome;
-        private string Cognome;
-        private string NTelefono;
+
+        public string Nome { get; set; }
+        public string Cognome { get; set; }
+        public string NTelefono { get; set; }
 
         protected Persona(string n, string c, string nT)
         {
