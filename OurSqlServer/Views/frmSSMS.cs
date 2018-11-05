@@ -26,10 +26,10 @@ namespace OurSqlServer
             List<Studenti> mystudISII = new List<Studenti>();
             List<Studenti> mystudTRAMELLO = new List<Studenti>();
 
-            string path_insISII =@"C:\Users\Mokanu\source\Repos\OurSqlServer\OurSqlServer\TextData\InsegnantiISII.txt";
-            string path_insTRAMELLO = @"C:\Users\Mokanu\source\Repos\OurSqlServer\OurSqlServer\TextData\InsegnantiTRAMELLO.txt";
-            string path_studISII = @"C:\Users\Mokanu\source\Repos\OurSqlServer\OurSqlServer\TextData\StudentiISII.txt";
-            string path_studTRAMELLO = @"C:\Users\Mokanu\source\Repos\OurSqlServer\OurSqlServer\TextData\StudentiTRAMELLO.txt";
+            string path_insISII =@"..\..\TextData\InsegnantiISII.txt";
+            string path_insTRAMELLO = @"..\..\TextData\InsegnantiTRAMELLO.txt";
+            string path_studISII = @"..\..\TextData\StudentiISII.txt";
+            string path_studTRAMELLO = @"..\..\TextData\StudentiTRAMELLO.txt";
 
             var line_insISII = File.ReadLines(path_insISII);
             var line_insTRAMELLO = File.ReadLines(path_insTRAMELLO);
@@ -65,7 +65,7 @@ namespace OurSqlServer
                 mystudTRAMELLO.Add(studentiTRAMELLO);
             }
 
-            txtPassword.Text = mystudISII.ElementAt(2).Nome.ToString();
+          
 
            
         }
