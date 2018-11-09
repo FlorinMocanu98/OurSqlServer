@@ -44,10 +44,10 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Location = new System.Drawing.Point(0, 13);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(615, 84);
+            this.textBox1.Size = new System.Drawing.Size(643, 84);
             this.textBox1.TabIndex = 0;
             // 
             // btnSend
@@ -115,21 +115,24 @@
             this.grpMain.Controls.Add(this.btnSend);
             this.grpMain.Controls.Add(this.textBox2);
             this.grpMain.Controls.Add(this.textBox1);
-            this.grpMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpMain.Location = new System.Drawing.Point(179, 0);
+            this.grpMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpMain.Location = new System.Drawing.Point(157, 0);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(621, 450);
+            this.grpMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.grpMain.Size = new System.Drawing.Size(643, 450);
             this.grpMain.TabIndex = 8;
             this.grpMain.TabStop = false;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Location = new System.Drawing.Point(3, 174);
+            this.textBox2.Location = new System.Drawing.Point(0, 177);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(615, 273);
+            this.textBox2.Size = new System.Drawing.Size(643, 273);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // frmMain
             // 
