@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Database");
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Database");
+            this.txtQuery = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.grpPanel = new System.Windows.Forms.GroupBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -41,20 +41,20 @@
             this.grpMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtQuery
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(0, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(643, 84);
-            this.textBox1.TabIndex = 0;
+            this.txtQuery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtQuery.Location = new System.Drawing.Point(0, 13);
+            this.txtQuery.Multiline = true;
+            this.txtQuery.Name = "txtQuery";
+            this.txtQuery.Size = new System.Drawing.Size(643, 84);
+            this.txtQuery.TabIndex = 0;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(117, 126);
+            this.btnSend.Location = new System.Drawing.Point(197, 105);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(174, 49);
             this.btnSend.TabIndex = 1;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -81,12 +81,13 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.treeView1.Location = new System.Drawing.Point(3, 105);
             this.treeView1.Name = "treeView1";
-            treeNode3.Name = "Nodo0";
-            treeNode3.Text = "Database";
+            treeNode1.Name = "Nodo0";
+            treeNode1.Text = "Database";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode1});
             this.treeView1.Size = new System.Drawing.Size(151, 342);
             this.treeView1.TabIndex = 5;
+            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
             // rdbHTTP
             // 
@@ -114,12 +115,12 @@
             // 
             this.grpMain.Controls.Add(this.btnSend);
             this.grpMain.Controls.Add(this.textBox2);
-            this.grpMain.Controls.Add(this.textBox1);
+            this.grpMain.Controls.Add(this.txtQuery);
             this.grpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMain.Location = new System.Drawing.Point(157, 0);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.grpMain.Padding = new System.Windows.Forms.Padding(0);
             this.grpMain.Size = new System.Drawing.Size(643, 450);
             this.grpMain.TabIndex = 8;
             this.grpMain.TabStop = false;
@@ -154,13 +155,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuery;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.GroupBox grpPanel;
         private System.Windows.Forms.GroupBox grpMain;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.RadioButton rdbHTTP;
         private System.Windows.Forms.RadioButton rdbSQL;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
