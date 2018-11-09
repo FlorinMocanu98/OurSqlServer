@@ -34,9 +34,9 @@ namespace OurSqlServer.Views
 
 
             // Salvo dentro una lista i nomi di tutte le scuole, sono elementi di secondo livello nell'albero
-            foreach (TreeNode tn in treeView1.Nodes[0].Nodes) {
+            foreach (TreeNode tn in treeView1.Nodes[0].Nodes) 
                 schools.Add(tn.Text);
-            }
+
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -51,9 +51,12 @@ namespace OurSqlServer.Views
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            // Se il nodo selezionato è una scuola si genera il comando USE + scuola_selezionata
 
-            if (schools.Any(item => item == e.Node.Text))
+            if (schools.Any(item => item == e.Node.Text)) {
                 txtQuery.Text = "USE " + e.Node.Text;
+
+            }
             else
                 txtQuery.Clear();
 
